@@ -18,8 +18,16 @@ const useinitialState = () => {
     });
   }
 
+  const addToBuyer = payload => {
+    setState({
+      ...state,
+      buyer: [...state.buyer, payload],
+    });
+  }
+
   return {
     addToCart,
+    addToBuyer,
     removeFromCart,
     state,
   };
